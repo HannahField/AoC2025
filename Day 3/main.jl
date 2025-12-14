@@ -8,8 +8,8 @@ function part_1(bank)
     return 10*bank[first_index] + bank[second_index+first_index]
 end
 
-bank_sum = sum(part_1.(data))
-
+bank_sum_1 = sum(part_1.(data))
+println(bank_sum_1)
 function part_2(bank,n::Int)
     indeces = zeros(Int,n)
     indeces[1] = argmax(bank[1:end-n+1])
@@ -20,4 +20,5 @@ function part_2(bank,n::Int)
     return sum(10 .^((n-1):-1:0) .* vals)
 end
 
-bank_sum = sum(part_2.(data,12))
+bank_sum_2 = sum(part_2.(data,12))
+println(bank_sum_2)
