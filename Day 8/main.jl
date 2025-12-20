@@ -25,13 +25,6 @@
             append!(networks[ns[1]], [current_edge.i, current_edge.j])
             append!(networks[ns[1]], networks[ns[2]])
             deleteat!(networks, ns[2])
-
-        else
-            println(current_edge)
-            println(ns)
-            for n in ns
-                println(networks[n])
-            end
         end
         unique!.(networks)
     end
